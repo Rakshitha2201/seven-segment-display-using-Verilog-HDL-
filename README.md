@@ -42,9 +42,12 @@ To design and simulate a seven-segment display driver using Verilog HDL, and ver
 
 ```verilog
 `timescale 1ns / 1ps
-module bcd( input wire [3:0] binary_input,
-output reg [6:0] seg_output );
-always @(*) begin case (binary_input)
+module bcd( binary_input,seg_output );
+input wire [3:0] binary_input;
+output reg [6:0] seg_output;
+always @(*)
+begin
+case (binary_input)
 4'b0000: seg_output = 7'b0111111;
 4'b0001: seg_output = 7'b0000110;
 4'b0010: seg_output = 7'b1011011;

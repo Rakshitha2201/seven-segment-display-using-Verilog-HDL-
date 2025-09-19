@@ -48,17 +48,17 @@ output reg [6:0] seg_output;
 always @(*)
 begin
 case (binary_input)
-4'b0000: seg_output = 7'b0111111;
-4'b0001: seg_output = 7'b0000110;
-4'b0010: seg_output = 7'b1011011;
-4'b0011: seg_output = 7'b1001111;
-4'b0100: seg_output = 7'b1100110;
-4'b0101: seg_output = 7'b1101101;
-4'b0110: seg_output = 7'b1111101;
-4'b0111: seg_output = 7'b0000111;
-4'b1000: seg_output = 7'b1111111;
-4'b1001: seg_output = 7'b1101111;
-default: seg_output = 7'b0000000;
+        4'b0000: seg_output = 7'b0000001; 
+        4'b0001: seg_output = 7'b1001111; 
+        4'b0010: seg_output = 7'b0010010; 
+        4'b0011: seg_output = 7'b0000110; 
+        4'b0100: seg_output = 7'b1001100; 
+        4'b0101: seg_output = 7'b0100100; 
+        4'b0110: seg_output = 7'b0100000;
+        4'b0111: seg_output = 7'b0001111;
+        4'b1000: seg_output = 7'b0000000;
+        4'b1001: seg_output = 7'b0000100;
+        default: seg_output = 7'b1111111;
 endcase
 end
 endmodule
@@ -90,7 +90,7 @@ endmodule
 ```
 ## Simulated Output
 
-<img width="1919" height="1079" alt="Screenshot 2025-08-29 123118" src="https://github.com/user-attachments/assets/ab712af3-5e14-4a76-ba75-0aa5b1155be7" />
+<img width="1904" height="1079" alt="Screenshot 2025-09-19 110239" src="https://github.com/user-attachments/assets/b30914a2-2c63-4154-846f-574bc84c0a87" />
 
 
 ---
